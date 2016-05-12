@@ -1,0 +1,39 @@
+Construct Triangle S1 push to S2 and S3
+S2 pushes to S3, 
+
+@S1 
+prefix ex:http://www.example.org/
+INSERT DATA { 
+ex:France ex:in ex:Asia .
+ex:Italy ex:in Europe
+ }
+
+@S2
+prefix ex:http://www.example.org/
+DELETE {ex:France ex:in ?o}
+INSERT {ex:France ex:in ex:Europe}
+
+// See convergence with only France in Europe
+
+
+@S2 
+prefix ex:http://www.example.org/
+INSERT DATA { 
+ex:France ex:in ex:Asia .
+ex:Italy ex:in Europe
+ }
+
+@S1 
+prefix ex:http://www.example.org/
+INSERT DATA { 
+ex:France ex:in ex:Asia .
+ex:Italy ex:in Europe
+ }
+
+@S2
+prefix ex:http://www.example.org/
+DELETE {ex:France ex:in ?o}
+INSERT {ex:France ex:in ex:Europe}
+
+// S3 still has one France in asia, the one from S1.
+// Explanation needed?

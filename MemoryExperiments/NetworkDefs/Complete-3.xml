@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+
+<!DOCTYPE network SYSTEM 'Network.dtd'>
+
+<network>
+    <participant id="participant1">
+        <host>http://localhost
+        
+        </host>
+        <port>20501</port>
+        <basedata>http://localhost/~luisdanielibanesgonzalez/datasets/MicroBase.nt</basedata>
+        <dynamic>
+            <insert>1.0 </insert>
+            <delete>0.0</delete>
+        </dynamic> 
+        <source id="participant2">
+            <view>
+                <subject></subject>
+                <predicate>&lt;http://dbpedia.org/ontology/deathPlace&gt;
+                </predicate>
+                <object></object>
+            </view>
+            <!--
+            <view>
+                <subject></subject>
+                <predicate>&lt;http://dbpedia.org/ontology/deathPlace&gt;
+                </predicate>
+                <object></object>
+            </view>
+            -->
+        </source>
+        <source id="participant3">
+            <view>
+                <subject></subject>
+                <predicate>&lt;http://dbpedia.org/ontology/deathPlace&gt;
+                </predicate>
+                <object></object>
+            </view>
+        </source>
+    </participant>
+    <participant id="participant2">
+        <host>http://localhost
+        </host>
+        <port>20502</port>
+        <basedata>http://localhost/~luisdanielibanesgonzalez/datasets/MicroBase.nt</basedata>
+        <dynamic>
+            <insert>1.0 </insert>
+            <delete>0.0</delete>
+        </dynamic> 
+        <source id="participant3">
+            <view>
+                <subject></subject>
+                <predicate>&lt;http://dbpedia.org/ontology/deathPlace&gt;
+                </predicate>
+                <object></object>
+            </view>
+        </source>
+        <source id="participant1">
+            <view>
+                <subject></subject>
+                <predicate>&lt;http://dbpedia.org/ontology/deathPlace&gt;
+                </predicate>
+                <object></object>
+            </view>
+        </source>
+    </participant>
+    <participant id="participant3">
+        <host>http://localhost
+        </host>
+        <port>20503</port>
+        <basedata>http://localhost/~luisdanielibanesgonzalez/datasets/MicroBase.nt</basedata>
+        <dynamic>
+            <insert>1.0</insert>
+            <delete>0.0</delete>
+        </dynamic> 
+        <source id="participant1">
+            <view>
+                <subject></subject>
+                <predicate>&lt;http://dbpedia.org/ontology/deathPlace&gt;
+                </predicate>
+                <object></object>
+            </view>
+        </source>
+        <source id="participant2">
+            <view>
+                <subject></subject>
+                <predicate>&lt;http://dbpedia.org/ontology/deathPlace&gt;
+                </predicate>
+                <object></object>
+            </view>
+        </source>
+    </participant>
+</network>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<!ELEMENT network (participant)*>
+<!ATTLIST network
+    type (random|erdos) #IMPLIED
+    participants CDATA #IMPLIED
+    edges CDATA #IMPLIED
+    density CDATA #IMPLIED
+    connected (True|False) #IMPLIED
+>
+<!ELEMENT participant (host,port,basedata,dynamic,source*)>
+<!ELEMENT host (#PCDATA)>
+<!ELEMENT port (#PCDATA)>
+<!ATTLIST participant
+    id CDATA #REQUIRED>
+<!ELEMENT basedata (#PCDATA)>
+<!ELEMENT dynamic (insert,delete)>
+<!ELEMENT insert (#PCDATA)>
+<!ELEMENT delete (#PCDATA)>
+<!ELEMENT source (view)*>
+<!ATTLIST source
+    id CDATA #REQUIRED>
+<!ELEMENT view (subject,predicate,object)>
+<!ELEMENT subject (#PCDATA)>
+<!ELEMENT predicate (#PCDATA)>
+<!ELEMENT object (#PCDATA)>
+
+
